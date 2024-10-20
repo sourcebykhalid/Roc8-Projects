@@ -4,36 +4,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roc8 Projects</title>
+    <title>Moonshot Projects</title>
     <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
             text-align: center;
-            margin-top: 50px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-weight: bold;
         }
 
         a {
-            display: block;
-            margin: 10px;
-            padding: 10px;
+            display: inline-block;
+            margin: 15px;
+            padding: 15px 25px;
             text-decoration: none;
             color: white;
             background-color: #007BFF;
-            border-radius: 5px;
-            width: 200px;
-            margin: 0 auto;
+            border-radius: 10px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
         }
 
         a:hover {
             background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Container for links */
+        .projects-container {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Background styling */
+        .bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: url('https://source.unsplash.com/1600x900/?technology,space') no-repeat center center/cover;
+            filter: blur(8px) brightness(0.4);
+        }
+
+        /* For smaller screens */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            a {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
         }
     </style>
 </head>
 
 <body>
+    <div class="bg-overlay"></div>
     <h1>Moonshot Projects</h1>
-    <a href="https://moonshot-datavista-408h.onrender.com/" target="_blank">Charts App</a>
-    <a href="https://moonshot-email-app.onrender.com/" target="_blank">Email App</a>
+    <div class="projects-container">
+        <a href="https://moonshot-datavista-408h.onrender.com/" target="_blank">Charts App</a>
+        <a href="https://moonshot-email-app.onrender.com/" target="_blank">Email App</a>
+    </div>
 </body>
 
 </html>
